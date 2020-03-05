@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  dnsmasq:
+    build:
+      context: "./dnsmasq"
+      dockerfile: "Dockerfile"
+    ports:
+      - 67:67
+      - 69:69
+  nfs:
+    build:
+      context: "./nfs"
+      dockerfile: "Dockerfile"
+      - 2049:2049
