@@ -12,4 +12,5 @@ services:
     build:
       context: "./nfs"
       dockerfile: "Dockerfile"
+    ports:
       - 2049:2049
