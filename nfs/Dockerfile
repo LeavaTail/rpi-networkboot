@@ -7,3 +7,5 @@ RUN set -x && \
 
 EXPOSE 2049/tcp
 COPY exports /etc/exports
+
+ENTRYPOINT ["/bin/sh"]

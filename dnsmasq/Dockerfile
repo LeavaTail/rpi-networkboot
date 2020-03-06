@@ -7,3 +7,5 @@ RUN set -x && \
 
 EXPOSE 67/udp 69/udp
 COPY dnsmasq.conf /etc/dnsmasq.conf
+
+ENTRYPOINT ["dnsmasq","--no-daemon"]
