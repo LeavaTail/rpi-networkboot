@@ -5,6 +5,7 @@ services:
     build:
       context: "./dnsmasq"
       dockerfile: "Dockerfile"
+    network_mode: "host"
     ports:
       - 67:67
       - 69:69
