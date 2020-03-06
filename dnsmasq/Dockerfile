@@ -5,6 +5,7 @@ RUN set -x && \
     apk update && \
     apk --no-cache add dnsmasq
 
+WORKDIR /srv/tftpboot
 EXPOSE 67/udp 69/udp
 COPY dnsmasq.conf /etc/dnsmasq.conf
 

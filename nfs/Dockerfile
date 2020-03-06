@@ -5,6 +5,7 @@ RUN set -x && \
     apk update && \
     apk --no-cache add nfs-utils
 
+WORKDIR /srv/rootfs
 EXPOSE 2049/tcp
 COPY exports /etc/exports
 

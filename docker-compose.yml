@@ -5,6 +5,8 @@ services:
     build:
       context: "./dnsmasq"
       dockerfile: "Dockerfile"
+    volumes:
+      - ./rpi3/tftpboot:/srv/tftpboot:ro
     network_mode: "host"
     ports:
       - 67:67
@@ -13,6 +15,8 @@ services:
     build:
       context: "./nfs"
       dockerfile: "Dockerfile"
+    volumes:
+      - ./rpi3/rootfs:/srv/rootfs:ro
     ports:
       - 2049:2049
     tty: true
