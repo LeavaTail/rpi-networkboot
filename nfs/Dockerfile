@@ -6,3 +6,4 @@ RUN set -x && \
     apk --no-cache add nfs-utils
 
 EXPOSE 2049/tcp
+COPY exports /etc/exports
