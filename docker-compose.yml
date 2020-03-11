@@ -6,7 +6,7 @@ services:
       context: "."
       dockerfile: "Dockerfile"
     volumes:
-      - $PWD/tftpboot:/srv
+      - /srv:/srv
     network_mode: "host"
     ports:
       - 67:67
