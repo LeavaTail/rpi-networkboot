@@ -18,7 +18,7 @@ If you use this image, you must check dnsmasq.conf and rewrite.
 **Case 1: use Dockerfile**
 ```shell
  $ docker build -t rpi-networkboot .
- $ docker run -d --net=host -v tftpboot:/srv rpi-networkboot
+ $ docker run -d --net=host -v /srv:/srv rpi-networkboot
 ```
 **Case2: Use Docker-compose**
 ```shell
