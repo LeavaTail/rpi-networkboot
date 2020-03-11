@@ -13,11 +13,12 @@ If you use this image, you must check dnsmasq.conf and rewrite.
   * `dhcp-range`: DHCP range where the netmask is given
   * `interface`: Repeat the line for more than one interface
 2. Run container
+  * If you stored boot image in "/srv", you execute the following either command.
 
 **Case 1: use Dockerfile**
 ```shell
  $ docker build -t rpi-networkboot .
- $ docker run -d --net=host -v tftpboot:/srv rpi-networkboot
+ $ docker run -d --net=host -v /srv:/srv rpi-networkboot
 ```
 **Case2: Use Docker-compose**
 ```shell
